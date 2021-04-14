@@ -15,13 +15,16 @@
                     <li class="active">
                         <a href="layouts.index">Home</a></li>
                     <li>
-                        <a href="pages.blog">Blog </a>
+                        <a href="/blog">Blog </a>
                     </li>
                     <li>
-                        <a href="portfolio.">Portfolio</a>                                
+                        <a href="/portfolio">Portfolio</a>                                
                     </li>
                     <li>
-                        <a href="contact.">Contact</a>
+                        <a href="/contact">Contact</a>
+                    </li> 
+                    <li>
+                        <a href="/back">BackOffice</a>
                     </li> 
                 </ul><!-- /.navbar-nav -->
             </div><!-- /.navbar-collapse -->

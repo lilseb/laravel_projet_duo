@@ -8,11 +8,13 @@
             <h1 class="section-title-big text-center">Portfolio</h1>
         </div>
 
+        @foreach ($image as $item)
+
         <div class="container-fluid">
             <div class="row" id="grid">
                 <div class="col-lg-fifth col-md-3 col-sm-4 col-xs-6" data-groups='["uiux"]'>
                     <a class="portfolio-link" href="#">
-                        <img src="assets/img/portfolio-1.jpg" alt="" class="img-carousel">
+                        <img src={{$item->image}} alt="" class="img-carousel">
                         <div class="portfolio-info">
                             <div class="portfolio-info-top">
                                 <h3>Business Perfect item</h3>
@@ -205,10 +207,10 @@
                         </div><!-- /.portfolio-info  -->
                     </a>
                 </div><!-- /.col-lg-fifth  -->
-
             </div><!-- /#grid -->
-
+            
         </div>
+        @endforeach
         
     </section><!-- /.portfolio -->
 

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\portfolio;
+use App\Models\Article;
+use App\Models\back;
 use Illuminate\Http\Request;
 
-class PortfolioController extends Controller
+class BackController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $image = Portfolio::all();
-        return view('/pages.portfolio', compact('image'));
+        $article =  Article::all();
+        return view('/pages.back',compact('article'));
     }
 
     /**
@@ -42,10 +43,10 @@ class PortfolioController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\portfolio  $portfolio
+     * @param  \App\Models\back  $back
      * @return \Illuminate\Http\Response
      */
-    public function show(portfolio $portfolio)
+    public function show(back $back)
     {
         //
     }
@@ -53,10 +54,10 @@ class PortfolioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\portfolio  $portfolio
+     * @param  \App\Models\back  $back
      * @return \Illuminate\Http\Response
      */
-    public function edit(portfolio $portfolio)
+    public function edit(back $back)
     {
         //
     }
@@ -65,10 +66,10 @@ class PortfolioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\portfolio  $portfolio
+     * @param  \App\Models\back  $back
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, portfolio $portfolio)
+    public function update(Request $request, back $back)
     {
         //
     }
@@ -76,10 +77,10 @@ class PortfolioController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\portfolio  $portfolio
+     * @param  \App\Models\back  $back
      * @return \Illuminate\Http\Response
      */
-    public function destroy(portfolio $portfolio)
+    public function destroy(back $back)
     {
         //
     }
