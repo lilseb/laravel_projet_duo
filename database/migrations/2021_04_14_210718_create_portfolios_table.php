@@ -17,7 +17,6 @@ class CreatePortfoliosTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('titre','50');
-            $table->string('image','100');
             $table->text('text');
         });
     }

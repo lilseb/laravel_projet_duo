@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
-use App\Models\back;
+use App\Models\backPortfolio;
+use App\Models\portfolio;
 use Illuminate\Http\Request;
 
-class BackController extends Controller
+class BackPortfolioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,9 @@ class BackController extends Controller
      */
     public function index()
     {
-        $article =  Article::all();
-        return view('/pages.back',compact('article'));
+        $image =  portfolio::all();
+        $i = 1;
+        return view('/pages.backPortfolio',compact('image','i'));
     }
 
     /**
@@ -43,10 +44,10 @@ class BackController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\back  $back
+     * @param  \App\Models\backPortfolio  $backPortfolio
      * @return \Illuminate\Http\Response
      */
-    public function show(back $back)
+    public function show(backPortfolio $backPortfolio)
     {
         //
     }
@@ -54,10 +55,10 @@ class BackController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\back  $back
+     * @param  \App\Models\backPortfolio  $backPortfolio
      * @return \Illuminate\Http\Response
      */
-    public function edit(back $back)
+    public function edit(backPortfolio $backPortfolio)
     {
         //
     }
@@ -66,10 +67,10 @@ class BackController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\back  $back
+     * @param  \App\Models\backPortfolio  $backPortfolio
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, back $back)
+    public function update(Request $request, backPortfolio $backPortfolio)
     {
         //
     }
@@ -77,10 +78,10 @@ class BackController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\back  $back
+     * @param  \App\Models\backPortfolio  $backPortfolio
      * @return \Illuminate\Http\Response
      */
-    public function destroy(back $back)
+    public function destroy(backPortfolio $backPortfolio)
     {
         //
     }

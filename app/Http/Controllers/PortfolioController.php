@@ -12,10 +12,17 @@ class PortfolioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $image = Portfolio::all();
-        return view('/pages.portfolio', compact('image'));
+    public function index(){
+        $image =  portfolio::limit(15)->get();
+        $i = 1;
+        return view('/pages.portfolio', compact('image','i'));
+    }
+    public function create(Request $request){
+        $image =  new portfolio();
+        $image->titre = $request->titre;
+        $image->text = $request->text;
+        $image->save();
+        return redirect()->back();
     }
 
     /**
@@ -23,10 +30,6 @@ class PortfolioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
