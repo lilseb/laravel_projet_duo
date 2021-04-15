@@ -17,12 +17,12 @@
     <!-- Stylesheets
     ================================================== -->
     <!-- Bootstrap core CSS -->
-    <link href={{"css/bootstrap.min.css"}} rel="stylesheet">
+    <link href='{{asset("css/bootstrap.min.css")}}' rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href={{"css/style.css"}} rel="stylesheet">
-    <link href={{"css/responsive.css"}} rel="stylesheet">
-    <link href={{"css/colors.css"}} rel="stylesheet">
+    <link href='{{asset("css/style.css")}}' rel="stylesheet">
+    <link href='{{asset("css/responsive.css")}}' rel="stylesheet">
+    <link href='{{asset("css/colors.css")}}' rel="stylesheet">
 
     <link rel="stylesheet" href={{asset('css/app.css')}}>
 </head>
@@ -31,15 +31,15 @@
     @yield('content')
     @include('partial.footer')
 
-    <script src={{'js/app.js'}}></script>
+    <script src={{asset('js/app.js')}}></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
-    <script src={{"js/bootstrap.min.js"}}></script>
-    <script src={{"js/jquery.slicknav.min.js"}}></script>
-    <script src={{"js/slick.min.js"}}></script>
-    <script src={{"js/touchswipe.min.js"}}></script>
-    <script src={{"js/skrollr.min.js"}}></script>
-    <script src={{"js/jquery.countTo.min.js"}}></script>
-    <script src={{"js/script.js"}}></script>
+    <script src={{asset("js/bootstrap.min.js")}}></script>
+    <script src={{asset("js/jquery.slicknav.min.js")}}></script>
+    <script src={{asset("js/slick.min.js")}}></script>
+    <script src={{asset("js/touchswipe.min.js")}}></script>
+    <script src={{asset("js/skrollr.min.js")}}></script>
+    <script src={{asset("js/jquery.countTo.min.js")}}></script>
+    <script src={{asset("js/script.js")}}></script>
     
 </body>
 </html>
