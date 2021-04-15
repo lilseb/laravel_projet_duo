@@ -2,27 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\backPortfolio;
 use App\Models\portfolio;
 use Illuminate\Http\Request;
 
-class PortfolioController extends Controller
+class BackPortfolioController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
-        $image =  portfolio::limit(15)->get();
+    public function index()
+    {
+        $image =  portfolio::all();
         $i = 1;
-        return view('/pages.portfolio', compact('image','i'));
-    }
-    public function create(Request $request){
-        $image =  new portfolio();
-        $image->titre = $request->titre;
-        $image->text = $request->text;
-        $image->save();
-        return redirect()->back();
+        return view('/pages.backPortfolio',compact('image','i'));
     }
 
     /**
@@ -30,6 +25,10 @@ class PortfolioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function create()
+    {
+        //
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -45,10 +44,10 @@ class PortfolioController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\portfolio  $portfolio
+     * @param  \App\Models\backPortfolio  $backPortfolio
      * @return \Illuminate\Http\Response
      */
-    public function show(portfolio $portfolio)
+    public function show(backPortfolio $backPortfolio)
     {
         //
     }
@@ -56,10 +55,10 @@ class PortfolioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\portfolio  $portfolio
+     * @param  \App\Models\backPortfolio  $backPortfolio
      * @return \Illuminate\Http\Response
      */
-    public function edit(portfolio $portfolio)
+    public function edit(backPortfolio $backPortfolio)
     {
         //
     }
@@ -68,10 +67,10 @@ class PortfolioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\portfolio  $portfolio
+     * @param  \App\Models\backPortfolio  $backPortfolio
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, portfolio $portfolio)
+    public function update(Request $request, backPortfolio $backPortfolio)
     {
         //
     }
@@ -79,10 +78,10 @@ class PortfolioController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\portfolio  $portfolio
+     * @param  \App\Models\backPortfolio  $backPortfolio
      * @return \Illuminate\Http\Response
      */
-    public function destroy(portfolio $portfolio)
+    public function destroy(backPortfolio $backPortfolio)
     {
         //
     }
