@@ -17,13 +17,33 @@ class PortfolioController extends Controller
         $i = 1;
         return view('/pages.portfolio', compact('image','i'));
     }
-    public function create(Request $request){
+    public function store(Request $request){
         $image =  new portfolio();
         $image->titre = $request->titre;
         $image->text = $request->text;
         $image->save();
         return redirect()->back();
     }
+    public function destroy($id)
+    {
+        $image= portfolio::find($id);
+        $image->delete();
+        return redirect()->back();
+    }
+    public function show($id)
+    {
+        $image= portfolio::find($id);
+        return view('pages/showPortfolio',compact('image'));
+    }
+    public function edit(Request $request, $id)
+    {
+        $image= portfolio::find($id);
+        $image->titre = $request->titre;
+        $image->text = $request->text;
+        $image->save();
+        return redirect()->back();
+    }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -37,10 +57,6 @@ class PortfolioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
@@ -48,10 +64,6 @@ class PortfolioController extends Controller
      * @param  \App\Models\portfolio  $portfolio
      * @return \Illuminate\Http\Response
      */
-    public function show(portfolio $portfolio)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -59,10 +71,6 @@ class PortfolioController extends Controller
      * @param  \App\Models\portfolio  $portfolio
      * @return \Illuminate\Http\Response
      */
-    public function edit(portfolio $portfolio)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -82,8 +90,5 @@ class PortfolioController extends Controller
      * @param  \App\Models\portfolio  $portfolio
      * @return \Illuminate\Http\Response
      */
-    public function destroy(portfolio $portfolio)
-    {
-        //
-    }
+
 }
