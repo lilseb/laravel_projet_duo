@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 <header id="masthead" class="site-header-fill" data-anchor-target=".hero" data-top="background: rgba(59,58,54,0); border-bottom-color: rgba(226,226,226,0);" data-top-bottom="background: rgba(59,58,54,1); border-bottom-color: rgba(226,226,226,1);">
-=======
 <header id="masthead" class="site-header site-header-fill" data-anchor-target=".hero" data-top="background: rgba(59,58,54,0); border-bottom-color: rgba(226,226,226,0);" data-top-bottom="background: rgba(59,58,54,1); border-bottom-color: rgba(226,226,226,1);">
->>>>>>> 95d5df894a49aac6038272456ba0db33cfbecf9f
 
     <nav id="primary-navigation" class="site-navigation">
     
@@ -17,11 +14,8 @@
             <div class="main-menu" id="perfect-navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-<<<<<<< HEAD
-                        <a href="/">Home</a></li>
-=======
+
                         <a href={{route("home")}}>Home</a></li>
->>>>>>> 95d5df894a49aac6038272456ba0db33cfbecf9f
                     <li>
                         <a href={{route("blog")}}>Blog </a>
                     </li>
