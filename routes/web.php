@@ -39,3 +39,14 @@ Route::post('edit-article/{id}', [ArticleController::class, 'edit']);
 Route::post('edit-portfolio/{id}', [PortfolioController::class, 'edit']);
 
 
+
+
+
+
+
+
+
+
+
+
+
